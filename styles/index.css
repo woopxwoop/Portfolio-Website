@@ -11,7 +11,7 @@ body {
   margin: 0px;
   background-color: var(--periwinkle);
   height: 1000px;
-  padding-top: 120px;
+  padding-top: 2rem;
 }
 
 html {
