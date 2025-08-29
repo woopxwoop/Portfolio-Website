@@ -1,0 +1,55 @@
+:root {
+  --mimi-pink: #ffd6ffff;
+  --mauve: #e7c6ffff;
+  --mauve-2: #c8b6ffff;
+  --periwinkle: #b8c0ffff;
+  --periwinkle-2: #bbd0ffff;
+}
+
+body {
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: var(--periwinkle);
+  height: 1000px;
+  padding-top: 120px;
+}
+
+.header {
+  background-color: var(--mauve);
+  display: grid;
+  grid-template-columns: 400px 400px 600px;
+  font-size: 50px;
+  height: 80px;
+
+  top: 0;
+  padding: 20px;
+  padding-bottom: 0px;
+  position: fixed;
+}
+
+.profile-photo {
+  margin: auto;
+  margin-top: 100px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 75%;
+  border-style: solid;
+  border-width: 4px;
+}
+
+.name {
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
+}
