@@ -20,7 +20,7 @@ body {
 .header {
   background-color: var(--mauve);
   display: grid;
-  grid-template-columns: 400px 400px 600px;
+  grid-template-columns: 33vw 33vw 33vw;
   font-size: 50px;
   height: 80px;
 
