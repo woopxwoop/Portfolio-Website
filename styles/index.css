@@ -29,11 +29,11 @@ html {
   display: grid;
   grid-template-columns: 33vw 33vw 33vw;
   font-size: 1rem;
-  height: 80px;
+  height: 2rem;
 
   top: 0;
-  padding: 20px;
-  padding-bottom: 0px;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
   position: fixed;
 }
 
