@@ -10,61 +10,97 @@ body {
   padding: 0px;
   margin: 0px;
   background-color: var(--periwinkle);
-  height: 1000px;
-  padding-top: 2rem;
+  height: 2000px;
+  padding-top: 4rem;
 }
 
 html {
-  font-size: 50px;
+  font-size: 20px;
   font-family: "Bree Serif", "Arial";
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   html {
-    font-size: 20px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 6px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 4px;
   }
 }
 
 .header {
   background-color: var(--mauve);
   display: grid;
-  grid-template-columns: 20vw 15vw 25vw 25vw;
+  grid-template-columns: 19vw 15vw 25vw 26vw;
   column-gap: 5vw;
 
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 500;
-  height: 1.6rem;
+  height: 3.2rem;
 
   top: 0;
-  padding-top: 0.5rem;
-  padding-left: 0.5rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
   position: fixed;
 
   box-shadow: 0 2px 2px var(--mimi-pink);
 }
 
+.header-elem:hover {
+  cursor: pointer;
+}
+
 .profile-photo {
   margin: auto;
-  margin-top: 100px;
+  margin-top: 5rem;
   display: flex;
   justify-items: center;
   align-items: center;
-  width: 6rem;
-  height: 6rem;
+  width: 12rem;
+  height: 12rem;
+  margin-bottom: 0.5rem;
 }
 
 .profile-photo img {
   width: 100%;
   height: 100%;
-  border-radius: 75%;
+  border-radius: 90%;
   border-style: solid;
-  border-width: 4px;
+  border-width: 0.5rem;
   border-color: var(--periwinkle-2);
   object-fit: cover;
 }
 
 .section {
-  margin-top: 30px;
+  margin-top: 1.5rem;
   text-align: center;
-  font-size: 1rem;
+  font-size: 2rem;
+  text-decoration: underline;
+  text-decoration-color: var(--mauve);
+  margin-bottom: 0.5rem;
+}
+
+.about-me {
+  margin: auto;
+  text-align: center;
+  width: 80vw;
+}
+
+.projects {
+  text-align: center;
+}
+
+.class-list-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
