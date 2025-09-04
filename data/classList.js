@@ -44,20 +44,20 @@ export let classList = [
     description: "Data Structures",
   },
   {
-    listing: "CS577",
-    description: "Algorithims",
-  },
-  {
     listing: "CS537",
     description: "Operating Systems",
+  },
+  {
+    listing: "CS540",
+    description: "Intro to AI",
   },
   {
     listing: "CS571",
     description: "UI/UX/Frontend",
   },
   {
-    listing: "CS540",
-    description: "Intro to AI",
+    listing: "CS577",
+    description: "Algorithims",
   },
 ];
 
