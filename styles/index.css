@@ -108,7 +108,7 @@ html {
   text-align: center;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   #pokemon-proj {
     display: none;
   }
