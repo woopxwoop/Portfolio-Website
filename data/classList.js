@@ -33,7 +33,7 @@ export let classList = [
   },
   {
     listing: "CS252",
-    description: "Low Level/ASM",
+    description: "Intro to CompE/ASM",
   },
   {
     listing: "CS354",
