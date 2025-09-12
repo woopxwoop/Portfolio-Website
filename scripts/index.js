@@ -14,17 +14,22 @@ function renderClassList() {
 }
 
 function addHeaderEvents() {
-  const aboutMeSection = document.querySelector(".about-me");
-  const projectsSection = document.querySelector(".projects");
-  const educationSection = document.querySelector(".class-list-container");
+  const aboutMeSection = document.querySelector(".about-me-section");
+  const projectsSection = document.querySelector(".projects-section");
+  const educationSection = document.querySelector(".class-list-section");
 
   document.querySelector(".header-about-me").addEventListener("click", () => {
-    aboutMeSection.scrollIntoView({ block: "end", behavior: "smooth" });
+    aboutMeSection.scrollIntoView({ block: "start", behavior: "smooth" });
   });
   document.querySelector(".header-projects").addEventListener("click", () => {
-    projectsSection.scrollIntoView({ block: "end", behavior: "smooth" });
+    projectsSection.scrollIntoView({ block: "start", behavior: "smooth" });
   });
   document.querySelector(".header-education").addEventListener("click", () => {
-    educationSection.scrollIntoView({ block: "end", behavior: "smooth" });
+    educationSection.scrollIntoView({ block: "start", behavior: "smooth" });
+  });
+  document.querySelector(".header-contact-me").addEventListener("click", () => {
+    alert(
+      "Uh I should probably change this but this will do for now... Find me at louan1734@gmail.com or alou2@wisc.edu"
+    );
   });
 }

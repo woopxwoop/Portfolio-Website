@@ -14,8 +14,8 @@ body {
   padding: 0px;
   margin: 0px;
   background-color: var(--periwinkle);
-  height: 2000px;
   padding-top: 4rem;
+  padding-bottom: 10rem;
 }
 
 html {
@@ -44,23 +44,26 @@ html {
 .header {
   background-color: var(--mauve);
   display: grid;
-  grid-template-columns: 19vw 15vw 25vw 26vw;
-  column-gap: 5vw;
+  grid-template-columns: 1fr 1fr 1.2fr 1.2fr;
 
   font-size: 2rem;
   font-weight: 500;
   height: 3.2rem;
+  width: 100vw;
 
   top: 0;
-  padding-top: 1rem;
-  padding-left: 1rem;
+
   position: fixed;
 
   box-shadow: 0 2px 2px var(--mimi-pink);
 }
 
+.header-elem {
+  padding-left: 1rem;
+}
 .header-elem:hover {
   cursor: pointer;
+  background-color: rgb(205, 170, 205);
 }
 
 .profile-photo {
@@ -91,6 +94,7 @@ html {
   text-decoration: underline;
   text-decoration-color: var(--mauve);
   margin-bottom: 0.5rem;
+  scroll-margin-top: 4rem;
 }
 
 .about-me {
