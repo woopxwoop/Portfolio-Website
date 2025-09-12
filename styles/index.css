@@ -108,23 +108,14 @@ html {
   text-align: center;
 }
 
+@media screen and (max-width: 400px) {
+  #pokemon-proj {
+    display: none;
+  }
+}
+
 .class-list-container {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.responsive-iframe {
-  position: relative;
-  width: 100%;
-  max-width: 400px; /* or any max width you want */
-  margin: 0 auto;
-  aspect-ratio: 10 / 15.8; /* matches your original ratio */
-}
-
-.responsive-iframe iframe {
-  width: 100%;
-  height: 100%;
-  display: block;
-  border: 0;
 }
