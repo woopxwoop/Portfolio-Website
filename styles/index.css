@@ -27,6 +27,9 @@ html {
   html {
     font-size: 10px;
   }
+  #pokemon-proj {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -106,12 +109,6 @@ html {
 
 .projects {
   text-align: center;
-}
-
-@media screen and (max-width: 800px) {
-  #pokemon-proj {
-    display: none;
-  }
 }
 
 .class-list-container {
