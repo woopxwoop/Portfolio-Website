@@ -25,7 +25,7 @@ html {
 
 @media screen and (max-width: 1000px) {
   html {
-    font-size: 0.6remx;
+    font-size: 0.8rem;
   }
   #pokemon-proj {
     display: none;
@@ -34,13 +34,13 @@ html {
 
 @media screen and (max-width: 600px) {
   html {
-    font-size: 0.4rem;
+    font-size: 0.6rem;
   }
 }
 
 @media screen and (max-width: 400px) {
   html {
-    font-size: 0.3remx;
+    font-size: 0.4rem;
   }
 }
 
