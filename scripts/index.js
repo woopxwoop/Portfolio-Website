@@ -7,7 +7,7 @@ const UID = 621003558;
 let genshinUser;
 
 try {
-  genshinUser = await getUserData(UID);
+  genshinUser = await getUserData();
 } catch (error) {
   console.error("Invalid fetch");
 }

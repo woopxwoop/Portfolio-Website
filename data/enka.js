@@ -1,10 +1,14 @@
-const UID = 621003558;
+const UID = "621003558";
+const proxies = [
+  "https://corsproxy.io/?",
+  "https://api.cors-anywhere.herokuapp.com/",
+  "https://cors-anywhere.herokuapp.com/",
+];
 
 export async function getUserData() {
-  fetch(`https://enka.network/api/uid/${UID}/?info`, {
+  fetch(`${proxies[0]}https://enka.network/api/uid/${UID}/?info`, {
     headers: {
-      "Access-Control-Allow-Origin":
-        "https://woopxwoop.github.io/Portfolio-Website/",
+      "User-Agent": "woopxwoop",
     },
   })
     .then((res) => res.json())
