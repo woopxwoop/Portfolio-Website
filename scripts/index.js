@@ -1,5 +1,21 @@
 import { classList } from "../data/classList.js";
 
+import { getUserData } from "../data/enka.js";
+
+const UID = 621003558;
+
+let genshinUser;
+
+try {
+  genshinUser = await getUserData(UID);
+} catch (error) {
+  console.error("Invalid fetch");
+}
+
+if (genshinUser) {
+  console.log(genshinUser);
+}
+
 renderClassList();
 
 addHeaderEvents();
