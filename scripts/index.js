@@ -49,3 +49,13 @@ function addHeaderEvents() {
     );
   });
 }
+
+window.onload = () => {
+  document.querySelector(".popup-container").style.display = "block";
+  document.querySelector(".popup-overlay").style.display = "block";
+};
+
+document.querySelector(".close-popup").addEventListener("click", () => {
+  document.querySelector(".popup-container").style.display = "none";
+  document.querySelector(".popup-overlay").style.display = "none";
+});
