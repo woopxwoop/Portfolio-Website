@@ -2,6 +2,8 @@ import { classList } from "../data/classList.js";
 
 import { getUserData } from "../data/enka.js";
 
+import { pictures } from "../data/pictures.js";
+
 const UID = 621003558;
 
 let genshinUser;
@@ -59,3 +61,9 @@ document.querySelector(".close-popup").addEventListener("click", () => {
   document.querySelector(".popup-container").style.display = "none";
   document.querySelector(".popup-overlay").style.display = "none";
 });
+
+const randImage = pictures[Math.floor(Math.random() * pictures.length)];
+const head_shot = document.getElementById("head-shot");
+
+head_shot.src = randImage.src;
+head_shot.alt = randImage.alt;
