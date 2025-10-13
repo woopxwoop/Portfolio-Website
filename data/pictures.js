@@ -4,4 +4,8 @@ export let pictures = [
     src: "images/gaysicle.jpg",
     alt: "picture of me, Andrew Lou, with a rainbow popsicle",
   },
+  {
+    src: "images/haircut.jpg",
+    alt: "picture of me, Andrew Lou",
+  },
 ];
