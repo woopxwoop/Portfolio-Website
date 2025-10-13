@@ -22,6 +22,10 @@ renderClassList();
 
 addHeaderEvents();
 
+renderHeadShots();
+
+renderPopup();
+
 function renderClassList() {
   let classListHTML = "";
   classList.forEach((c) => {
@@ -52,25 +56,29 @@ function addHeaderEvents() {
   });
 }
 
-window.onload = () => {
-  document.querySelector(".popup-container").style.display = "block";
-  document.querySelector(".popup-overlay").style.display = "block";
-};
+function renderHeadShots() {
+  let carouselHTML = "";
+  const carousel = document.querySelector(".carousel-inner");
 
-document.querySelector(".close-popup").addEventListener("click", () => {
-  document.querySelector(".popup-container").style.display = "none";
-  document.querySelector(".popup-overlay").style.display = "none";
-});
-
-let carouselHTML = "";
-const carousel = document.querySelector(".carousel-inner");
-
-pictures.forEach((picture, index) => {
-  carouselHTML += `<div class="carousel-item ${
-    index == pictures.length - 1 ? "active" : ""
-  }">
+  pictures.forEach((picture, index) => {
+    carouselHTML += `<div class="carousel-item ${
+      index == pictures.length - 1 ? "active" : ""
+    }">
                     <img src="${picture.src}" alt="${picture.alt}" />
                    </div>`;
-});
+  });
 
-carousel.innerHTML = carouselHTML;
+  carousel.innerHTML = carouselHTML;
+}
+
+function renderPopup() {
+  window.onload = () => {
+    document.querySelector(".popup-container").style.display = "block";
+    document.querySelector(".popup-overlay").style.display = "block";
+  };
+
+  document.querySelector(".close-popup").addEventListener("click", () => {
+    document.querySelector(".popup-container").style.display = "none";
+    document.querySelector(".popup-overlay").style.display = "none";
+  });
+}
