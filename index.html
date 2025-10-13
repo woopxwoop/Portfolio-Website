@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Andrew Lou</title>
-    <link rel="stylesheet" href="styles/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <title>Andrew Lou</title>
+    <link rel="stylesheet" href="styles/bootstrap-styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap -->
   </head>
   <body>
     <div class="header">
@@ -33,9 +36,17 @@
       </div>
 
       <div class="profile-photo">
-        <!-- <img src="images/cropped.png" /> -->
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner"></div>
+        </div>
+      </div>
+
+      <!--
+      <div class="profile-photo">
         <img id="head-shot" />
       </div>
+    -->
+
       <div class="section about-me-section">About Me</div>
       <div class="about-me">
         Hello. I am An(drew) Lou, a 2nd year computer science student at the
@@ -61,5 +72,6 @@
       </div>
     </main>
     <script type="module" src="scripts/index.js?v=1.0"></script>
+    <script src="scripts/bootstrap-scripts/bootstrap.bundle.js"></script>
   </body>
 </html>

@@ -22,7 +22,9 @@ body {
   padding-bottom: 10rem;
 }
 
-html {
+html,
+head,
+body {
   font-size: 24px;
   font-family: "Bree Serif", "Arial";
 }

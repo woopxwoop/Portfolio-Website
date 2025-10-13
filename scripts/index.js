@@ -62,8 +62,15 @@ document.querySelector(".close-popup").addEventListener("click", () => {
   document.querySelector(".popup-overlay").style.display = "none";
 });
 
-const randImage = pictures[Math.floor(Math.random() * pictures.length)];
-const head_shot = document.getElementById("head-shot");
+let carouselHTML = "";
+const carousel = document.querySelector(".carousel-inner");
 
-head_shot.src = randImage.src;
-head_shot.alt = randImage.alt;
+pictures.forEach((picture, index) => {
+  carouselHTML += `<div class="carousel-item ${
+    index == pictures.length - 1 ? "active" : ""
+  }">
+                    <img src="${picture.src}" alt="${picture.alt}" />
+                   </div>`;
+});
+
+carousel.innerHTML = carouselHTML;
