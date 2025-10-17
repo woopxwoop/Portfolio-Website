@@ -1,6 +1,6 @@
 .disclaimer {
   display: block;
-  font-size: 2rem;
+  font-size: var(--margin-xl);
   margin-bottom: 0;
   width: 90%;
   color: black;
@@ -12,52 +12,64 @@
   --mauve-2: #c8b6ffff;
   --periwinkle: #b8c0ffff;
   --periwinkle-2: #bbd0ffff;
+
+  --persian-rose: #ff35a7ff;
+  --tropical-indigo: #9b7edeff;
+  --sapphire: #3857abff;
+
+  font-size: 20px;
+  --margin-xxs: 0.25rem;
+  --margin-xs: 0.5rem;
+  --margin-s: 0.75rem;
+  --margin-m: 1rem;
+  --margin-l: 1.25rem;
+  --margin-xl: 1.75rem;
+  --margin-xxl: 2.5rem;
+  --margin-xxxl: 4rem;
+  --margin-xxxxl: 6rem;
+  --margin-xxxxxl: 10rem;
 }
 
 body {
   padding: 0px;
   margin: 0px;
-  background-color: var(--periwinkle);
-  padding-top: 4rem;
-  padding-bottom: 10rem;
+  background-color: white;
+  padding-top: var(--margin-xxxl);
+  padding-bottom: var(--margin-xxxxl);
 }
 
 html,
 head,
 body {
-  font-size: 24px;
   font-family: "Bree Serif", "Arial";
 }
 
 @media screen and (max-width: 1000px) {
   html {
-    font-size: 0.8rem;
-  }
-  #pokemon-proj {
-    display: none;
+    font-size: var(--margin-m);
   }
 }
 
 @media screen and (max-width: 600px) {
   html {
-    font-size: 0.6rem;
+    font-size: var(--margin-s);
   }
 }
 
 @media screen and (max-width: 400px) {
   html {
-    font-size: 0.4rem;
+    font-size: var(--margin-xs);
   }
 }
 
 .header {
-  background-color: var(--mauve);
+  background-color: var(--tropical-indigo);
   display: grid;
-  grid-template-columns: 1fr 1fr 1.2fr 1.2fr;
+  grid-template-columns: 1.2fr 1fr 1.2fr 1.2fr;
 
-  font-size: 2rem;
+  font-size: 3vw;
   font-weight: 500;
-  height: 3.2rem;
+  height: 5vw;
   width: 100vw;
 
   top: 0;
@@ -65,62 +77,81 @@ body {
   position: fixed;
   z-index: 1;
 
-  box-shadow: 0 2px 2px var(--mimi-pink);
+  /* box-shadow: 0 2px 2px var(--persian-rose); */
 }
 
 .header-elem {
-  padding-left: 1rem;
+  padding-left: var(--margin-m);
+  /* padding-right: 2rem; */
 }
+
 .header-elem:hover {
   cursor: pointer;
-  background-color: rgb(205, 170, 205);
+  background-color: var(--sapphire);
+  color: white;
+  transition: 200ms;
+}
+
+.section-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 1rem;
+  margin-left: var(--margin-xxl);
+  margin-right: var(--margin-xxxl);
+}
+
+.section-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-header {
+  text-align: left;
+  font-size: 2rem;
+  scroll-margin-top: 4rem;
+  display: block;
+  margin-bottom: var(--margin-m);
+}
+
+.about-me {
+  text-align: left;
+  display: block;
+  width: 70%;
 }
 
 .profile-photo {
-  margin: auto;
-  margin-top: 5rem;
-  display: flex;
-  justify-items: center;
-  align-items: center;
-  width: 12rem;
-  height: 12rem;
-  margin-bottom: 0.5rem;
+  margin-top: var(--margin-m);
+  width: 40%;
+  height: 40%;
+  min-width: var(--margin-xxxxl);
+  min-height: var(--margin-xxxxl);
+  border-radius: 50%;
+  border: 0.5rem solid var(--tropical-indigo);
+  overflow: hidden;
+  margin-left: auto;
+  display: inline-block;
 }
 
 .profile-photo img {
   width: 100%;
   height: 100%;
-  border-radius: 90%;
-  border-style: solid;
-  border-width: 0.5rem;
-  border-color: var(--periwinkle-2);
   object-fit: cover;
 }
 
-.section {
-  margin-top: 1.5rem;
-  text-align: center;
-  font-size: 2rem;
-  text-decoration: underline;
-  text-decoration-color: var(--mauve);
-  margin-bottom: 0.5rem;
-  scroll-margin-top: 4rem;
-}
-
-.about-me {
-  margin: auto;
-  text-align: center;
-  width: 80vw;
+.profile-photo:hover {
+  border-color: var(--persian-rose);
+  transition: 200ms;
 }
 
 .projects {
-  text-align: center;
+  text-align: left;
 }
 
 .class-list-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
 }
 
 .popup-overlay {
@@ -142,7 +173,7 @@ body {
   top: 50vh;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: var(--mauve-2);
+  background-color: var(--tropical-indigo);
   width: 45rem;
   height: 10rem;
   border-radius: 2rem;
@@ -160,7 +191,7 @@ body {
   margin-top: 0.5rem;
   width: 9rem;
   height: 3rem;
-  background-color: var(--mimi-pink);
+  background-color: var(--persian-rose);
   color: black;
   font-size: 1rem;
   border-radius: 1rem;
