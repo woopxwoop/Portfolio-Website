@@ -46,19 +46,25 @@ body {
 
 @media screen and (max-width: 1000px) {
   html {
-    font-size: var(--margin-m);
+    font-size: var(--margin-l);
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   html {
     font-size: var(--margin-s);
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   html {
     font-size: var(--margin-xs);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: var(--margin-xxs);
   }
 }
 
