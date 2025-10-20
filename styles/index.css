@@ -227,3 +227,8 @@ body {
   color: white;
   background-color: var(--sapphire);
 }
+
+sl-animated-image {
+  width: var(--margin-xxxxxl);
+  height: var(--margin-xxxxxl);
+}

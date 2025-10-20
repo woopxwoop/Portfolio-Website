@@ -24,7 +24,7 @@ addHeaderEvents();
 
 renderHeadShots();
 
-renderPopup();
+// renderPopup();
 
 function renderClassList() {
   let classListHTML = "";

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,7 +11,13 @@
     <link rel="stylesheet" href="styles/bootstrap-styles/bootstrap.min.css" />
     <link rel="stylesheet" href="styles/index.css" />
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css"
+    />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- bootstrap -->
   </head>
   <body>
@@ -23,6 +29,7 @@
     </div>
 
     <main>
+      <!--
       <div class="popup-overlay">
         <div class="popup-container">
           <div class="popup-content">
@@ -35,6 +42,13 @@
           </div>
         </div>
       </div>
+      -->
+
+      <sl-alert variant="primary" open closable class="alert-closable">
+        <sl-icon slot="icon" name="info-circle"></sl-icon>
+        This website is in it's infancy (as you can probably tell)
+      </sl-alert>
+      <br />
 
       <!--
       <div class="profile-photo">
@@ -43,7 +57,7 @@
     -->
       <div class="section-container">
         <div class="section-column">
-          <div class="section-header about-me-section">About Me</div>
+          <h1 class="section-header about-me-section">About Me</h1>
           <div class="about-me">
             Hello. I am An(drew) Lou, a 2nd year computer science student at the
             University of Wisconsin-Madison! I am currently learning about AI,
@@ -59,7 +73,7 @@
       </div>
       <div class="section-container">
         <div class="section-column">
-          <div class="section-header projects-section">Projects</div>
+          <h1 class="section-header projects-section">Projects</h1>
           <div class="projects">
             <p>
               <a href="pages/pokemon_project.html">
@@ -72,15 +86,43 @@
       </div>
       <div class="section-container">
         <div class="section-column">
-          <div class="section-header class-list-section">Relevant Courses</div>
+          <h1 class="section-header class-list-section">Relevant Courses</h1>
           <div class="class-list-container">
             <ul class="class-list"></ul>
           </div>
         </div>
+        <sl-carousel autoplay loop navigation>
+          <sl-carousel-item>
+            <sl-card>
+              <p>test</p>
+              <sl-animated-image
+                src="media/webps/test3.webp"
+                alt="Animation of untied shoes walking on pavement"
+              >
+              </sl-animated-image>
+            </sl-card>
+          </sl-carousel-item>
+          <sl-carousel-item>
+            <sl-card>
+              <p>test2</p>
+              <sl-animated-image
+                src="media/webps/test.webp"
+                alt="Animation of untied shoes walking on pavement"
+              >
+              </sl-animated-image>
+            </sl-card>
+          </sl-carousel-item>
+        </sl-carousel>
       </div>
       <a href="pages/hobbies.html"> Fun stuff (wip)</a>
     </main>
     <script type="module" src="scripts/index.js?v=1.0"></script>
+
     <script src="scripts/bootstrap-scripts/bootstrap.bundle.js"></script>
+
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"
+    ></script>
   </body>
 </html>
