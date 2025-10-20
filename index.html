@@ -20,12 +20,28 @@
 
     <!-- bootstrap -->
   </head>
+
+  <sl-dialog label="Contact Me!" class="dialog-overview">
+    <sl-icon-button
+      name="envelope"
+      href="mailto:alou2@wisc.edu"
+      target="_blank"
+    ></sl-icon-button>
+    <sl-icon-button
+      name="linkedin"
+      href="https://www.linkedin.com/in/an-lou-350aa5374/"
+      target="_blank"
+    ></sl-icon-button>
+    <sl-button slot="footer" variant="primary">Close</sl-button>
+  </sl-dialog>
+
   <body>
     <div class="header">
       <div class="header-about-me header-elem">Who am I?</div>
       <div class="header-projects header-elem">Projects</div>
       <div class="header-education header-elem">Education</div>
-      <div class="header-contact-me header-elem">Contact Me</div>
+      <!-- <div class="header-contact-me header-elem">Contact Me</div> -->
+      <sl-button class="header-elem">Open Dialog</sl-button>
     </div>
 
     <main>
@@ -96,6 +112,7 @@
             <sl-card>
               <p>test</p>
               <sl-animated-image
+                play
                 src="media/webps/test3.webp"
                 alt="Animation of untied shoes walking on pavement"
               >
@@ -106,6 +123,7 @@
             <sl-card>
               <p>test2</p>
               <sl-animated-image
+                play
                 src="media/webps/test.webp"
                 alt="Animation of untied shoes walking on pavement"
               >

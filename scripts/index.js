@@ -49,11 +49,14 @@ function addHeaderEvents() {
   document.querySelector(".header-education").addEventListener("click", () => {
     educationSection.scrollIntoView({ block: "start", behavior: "smooth" });
   });
-  document.querySelector(".header-contact-me").addEventListener("click", () => {
-    alert(
-      "Uh I should probably change this but this will do for now... Find me at louan1734@gmail.com or alou2@wisc.edu"
-    );
-  });
+
+  // document.querySelector(".header-contact-me").addEventListener("click", () => {
+  //   alert(
+  //     "Uh I should probably change this but this will do for now... Find me at louan1734@gmail.com or alou2@wisc.edu"
+  //   );
+  // });
+
+  addDialogEvent();
 }
 
 function renderHeadShots() {
@@ -81,4 +84,13 @@ function renderPopup() {
     document.querySelector(".popup-container").style.display = "none";
     document.querySelector(".popup-overlay").style.display = "none";
   });
+}
+
+function addDialogEvent() {
+  const dialog = document.querySelector(".dialog-overview");
+  const openButton = dialog.nextElementSibling;
+  const closeButton = dialog.querySelector('sl-button[slot="footer"]');
+
+  openButton.addEventListener("click", () => dialog.show());
+  closeButton.addEventListener("click", () => dialog.hide());
 }

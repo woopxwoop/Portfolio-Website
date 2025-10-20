@@ -228,7 +228,12 @@ body {
   background-color: var(--sapphire);
 }
 
-sl-animated-image {
+sl-carousel-item {
   width: var(--margin-xxxxxl);
   height: var(--margin-xxxxxl);
+}
+
+sl-carousel {
+  width: var(--margin-xxxxxxl);
+  height: var(--margin-xxxxxxl);
 }
