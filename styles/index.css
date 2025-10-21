@@ -86,8 +86,8 @@ body {
 }
 
 .header {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr 1.2fr 1.2fr;
+  display: flex;
+  flex-direction: row;
 
   font-size: 3vw;
   font-weight: 500;
@@ -104,6 +104,7 @@ body {
 .header-elem {
   background-color: var(--tropical-indigo);
   text-align: center;
+  flex-grow: 1;
   /* padding-right: 2rem; */
 }
 
