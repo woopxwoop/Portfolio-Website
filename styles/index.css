@@ -86,14 +86,12 @@ body {
 }
 
 .header {
-  background-color: var(--tropical-indigo);
   display: grid;
   grid-template-columns: 1.2fr 1fr 1.2fr 1.2fr;
 
   font-size: 3vw;
   font-weight: 500;
-  height: 5vw;
-  width: 100vw;
+  width: 100%;
 
   top: 0;
 
@@ -104,7 +102,8 @@ body {
 }
 
 .header-elem {
-  padding-left: var(--margin-m);
+  background-color: var(--tropical-indigo);
+  text-align: center;
   /* padding-right: 2rem; */
 }
 
