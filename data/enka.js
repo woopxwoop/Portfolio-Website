@@ -6,14 +6,10 @@ const proxies = [
 ];
 
 export async function getUserData() {
-  fetch(`${proxies[0]}https://enka.network/api/uid/${UID}/?info`, {
+  console.log("fetching from enka API");
+  return fetch(`${proxies[0]}https://enka.network/api/uid/${UID}/?info`, {
     headers: {
       "User-Agent": "woopxwoop",
     },
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data);
-      return data;
-    });
+  }).then((res) => res.json());
 }

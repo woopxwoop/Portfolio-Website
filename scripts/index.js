@@ -6,19 +6,7 @@ import { pictures } from "../data/pictures.js";
 
 import { penTricksList } from "../data/pen-tricks.js";
 
-const UID = 621003558;
-
-let genshinUser;
-
-try {
-  genshinUser = await getUserData();
-} catch (error) {
-  console.error("Invalid fetch");
-}
-
-if (genshinUser) {
-  console.log(genshinUser);
-}
+getEnkaData();
 
 renderClassList();
 
@@ -115,4 +103,37 @@ function renderPenTricks() {
             </sl-card>
           </sl-carousel-item>`;
   });
+}
+
+async function getEnkaData(cacheKey = "enkaData", ttl = 3600_000) {
+  // default 1 hour TTL
+  const cached = localStorage.getItem(cacheKey);
+
+  if (cached) {
+    const { timestamp, data } = JSON.parse(cached);
+    const age = Date.now() - timestamp;
+
+    if (age < ttl) {
+      // Still fresh
+      console.log("Using cached data");
+      return data;
+    }
+  }
+
+  const UID = 621003558;
+
+  let userData;
+
+  try {
+    getUserData().then((data) => {
+      userData = data;
+      localStorage.setItem(
+        cacheKey,
+        JSON.stringify({ userData, timestamp: Date.now() })
+      );
+    });
+  } catch (error) {
+    console.error("Invalid fetch");
+    return;
+  }
 }
