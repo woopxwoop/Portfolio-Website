@@ -29,6 +29,7 @@
   --margin-xxxxl: 6rem;
   --margin-xxxxxl: 10rem;
   --margin-xxxxxxl: 16rem;
+  --body-m: 24rem;
 }
 
 body {
@@ -228,12 +229,40 @@ body {
   background-color: var(--sapphire);
 }
 
-sl-carousel-item {
-  width: var(--margin-xxxxxl);
-  height: var(--margin-xxxxxl);
+sl-carousel {
+  width: 100%;
+  max-width: 480px;
+  height: var(--body-m);
+  --scrollbar-width: 0; /* hide horizontal scrollbar if any */
 }
 
-sl-carousel {
-  width: var(--margin-xxxxxxl);
-  height: var(--margin-xxxxxxl);
+sl-card {
+  padding: var(--margin-m);
+  border-radius: var(--margin-xl);
+  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+sl-card:hover {
+  transform: translateY(-4px);
+}
+
+sl-card::part(header) {
+  font-size: var(--margin-l);
+  font-weight: 600;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+sl-animated-image {
+  width: 100%;
+  max-width: 360px;
+  border-radius: var(--margin-s);
+  overflow: hidden;
+  background-color: #fafafa;
+}
+
+/* Center the pagination dots and give them breathing space */
+sl-carousel::part(pagination) {
+  margin-top: var(--margin-s);
 }

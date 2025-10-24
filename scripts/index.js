@@ -1,8 +1,10 @@
-import { classList } from "../data/classList.js";
+import { classList } from "../data/class-list.js";
 
 import { getUserData } from "../data/enka.js";
 
 import { pictures } from "../data/pictures.js";
+
+import { penTricksList } from "../data/pen-tricks.js";
 
 const UID = 621003558;
 
@@ -23,6 +25,8 @@ renderClassList();
 addHeaderEvents();
 
 renderHeadShots();
+
+renderPenTricks();
 
 // renderPopup();
 
@@ -93,4 +97,22 @@ function addDialogEvent() {
 
   openButton.addEventListener("click", () => dialog.show());
   closeButton.addEventListener("click", () => dialog.hide());
+}
+
+function renderPenTricks() {
+  const carousel = document.querySelector("sl-carousel");
+
+  penTricksList.forEach((penTrick) => {
+    carousel.innerHTML += `<sl-carousel-item>
+            <sl-card class = "card-header">
+              <div slot="header">${penTrick.name}</div>
+              <sl-animated-image
+                play
+                src="${penTrick.src}"
+                alt="${penTrick.alt}"
+              >
+              </sl-animated-image>
+            </sl-card>
+          </sl-carousel-item>`;
+  });
 }

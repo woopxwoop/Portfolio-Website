@@ -116,30 +116,19 @@
             <ul class="class-list"></ul>
           </div>
         </div>
-        <sl-carousel autoplay loop navigation>
-          <sl-carousel-item>
-            <sl-card>
-              <p>test</p>
-              <sl-animated-image
-                play
-                src="media/webps/test3.webp"
-                alt="Animation of untied shoes walking on pavement"
-              >
-              </sl-animated-image>
-            </sl-card>
-          </sl-carousel-item>
-          <sl-carousel-item>
-            <sl-card>
-              <p>test2</p>
-              <sl-animated-image
-                play
-                src="media/webps/test2.webp"
-                alt="Animation of untied shoes walking on pavement"
-              >
-              </sl-animated-image>
-            </sl-card>
-          </sl-carousel-item>
-        </sl-carousel>
+        <div class="section-column">
+          <div style="text-align: center">
+            Pen tricks that will not get you hired:
+          </div>
+          <sl-carousel
+            autoplay
+            autoplay-interval="5000"
+            loop
+            pagination
+            navigation
+          >
+          </sl-carousel>
+        </div>
       </div>
     </main>
     <script type="module" src="scripts/index.js?v=1.0"></script>
