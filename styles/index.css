@@ -241,6 +241,9 @@ sl-card {
   border-radius: var(--margin-xl);
   background: #fff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  --border-width: 2.5px;
+  --border-style: solid;
+  --border-color: black;
 }
 
 sl-card:hover {
@@ -252,6 +255,7 @@ sl-card::part(header) {
   font-weight: 600;
   text-transform: capitalize;
   text-align: center;
+  background-color: var(--tropical-indigo);
 }
 
 sl-animated-image {
@@ -259,10 +263,54 @@ sl-animated-image {
   max-width: 360px;
   border-radius: var(--margin-s);
   overflow: hidden;
-  background-color: #fafafa;
+  background-color: white;
+  border: 2px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+sl-animated-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px var(--tropical-indigo);
 }
 
 /* Center the pagination dots and give them breathing space */
 sl-carousel::part(pagination) {
   margin-top: var(--margin-s);
+}
+
+.line {
+  fill: none;
+  stroke: var(--sapphire);
+  stroke-width: 2px;
+}
+
+.dot {
+  fill: black;
+  stroke: white;
+  stroke-width: 1px;
+}
+
+.tooltip {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.axis-label {
+  font-size: 14px;
+  fill: #333;
+}
+
+.grid {
+  stroke-dasharray: 3, 3;
+  opacity: 0.2;
+}
+
+.regression-line {
+  stroke: var(--persian-rose);
 }

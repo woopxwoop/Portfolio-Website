@@ -16,6 +16,13 @@
       href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css"
     />
 
+    <script src="scripts/bootstrap-scripts/bootstrap.bundle.js"></script>
+
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"
+    ></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- bootstrap -->
@@ -111,7 +118,7 @@
       </div>
       <div class="section-container">
         <div class="section-column">
-          <h1 class="section-header class-list-section">Relevant Courses</h1>
+          <h1 class="section-header class-list-section">Courses at Madison</h1>
           <div class="class-list-container">
             <ul class="class-list"></ul>
           </div>
@@ -130,14 +137,16 @@
           </sl-carousel>
         </div>
       </div>
+
+      <div class="section-container">
+        <div class="section-column">
+          <div class="section-header">Climate change might be real</div>
+          <br />
+          <div id="mendota-data"></div>
+        </div>
+      </div>
     </main>
     <script type="module" src="scripts/index.js?v=1.0"></script>
-
-    <script src="scripts/bootstrap-scripts/bootstrap.bundle.js"></script>
-
-    <script
-      type="module"
-      src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"
-    ></script>
+    <script type="module" src="scripts/mendota-data.js"></script>
   </body>
 </html>

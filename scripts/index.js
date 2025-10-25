@@ -91,7 +91,7 @@ function renderPenTricks() {
   const carousel = document.querySelector("sl-carousel");
 
   penTricksList.forEach((penTrick) => {
-    carousel.innerHTML += `<sl-carousel-item>
+    carousel.innerHTML += `<sl-carousel-item role="tabpanel">
             <sl-card class = "card-header">
               <div slot="header">${penTrick.name}</div>
               <sl-animated-image
