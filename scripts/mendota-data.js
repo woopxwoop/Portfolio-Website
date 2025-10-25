@@ -170,7 +170,7 @@ d3.csv("data/ice_data.csv")
       .attr("text-anchor", "middle")
       .style("font-size", "16px")
       .style("font-weight", "bold")
-      .text("Number of days Lake Mendota is frozen over time (1855-2023)");
+      .text("Number of days Lake Mendota is frozen per year (1855-2023)");
   })
   .catch(function (error) {
     console.error("Error loading the CSV file:", error);

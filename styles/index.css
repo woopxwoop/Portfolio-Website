@@ -235,9 +235,8 @@ body {
 }
 
 sl-carousel {
-  width: 100%;
-  max-width: 480px;
-  height: var(--body-m);
+  height: 500px;
+  width: 440px;
   --scrollbar-width: 0; /* hide horizontal scrollbar if any */
 }
 
@@ -265,8 +264,7 @@ sl-card::part(header) {
 }
 
 sl-animated-image {
-  width: 100%;
-  max-width: 360px;
+  width: 240px;
   border-radius: var(--margin-s);
   overflow: hidden;
   background-color: white;
