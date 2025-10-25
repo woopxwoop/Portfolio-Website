@@ -23,7 +23,7 @@ const svg = d3
 const tooltip = d3.select("body").append("div").attr("class", "tooltip");
 
 // Read CSV file
-d3.csv("../data/ice_data.csv")
+d3.csv("data/ice_data.csv")
   .then(function (data) {
     // Convert string values to numbers
     data.forEach((d) => {
