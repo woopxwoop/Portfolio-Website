@@ -30,6 +30,7 @@
   --margin-xxxxxl: 10rem;
   --margin-xxxxxxl: 16rem;
   --body-m: 24rem;
+  --body-l: 36rem;
 }
 
 body {
@@ -135,7 +136,7 @@ body {
   font-size: var(--margin-xl);
   scroll-margin-top: var(--margin-xxxl);
   display: block;
-  margin-bottom: var(--margin-xxs);
+  margin-bottom: var(--margin-xs);
 }
 
 .about-me {
@@ -181,6 +182,10 @@ body {
   display: flex;
   align-items: left;
   justify-content: left;
+}
+
+.class-list {
+  text-align: left;
 }
 
 .popup-overlay {
@@ -237,7 +242,7 @@ sl-carousel {
 }
 
 sl-card {
-  padding: var(--margin-m);
+  padding: var(--margin-s);
   border-radius: var(--margin-xl);
   background: #fff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -251,6 +256,7 @@ sl-card:hover {
 }
 
 sl-card::part(header) {
+  padding: var(--margin-s);
   font-size: var(--margin-l);
   font-weight: 600;
   text-transform: capitalize;
@@ -279,6 +285,11 @@ sl-carousel::part(pagination) {
   margin-top: var(--margin-s);
 }
 
+.mendota-section {
+  width: var(--body-l);
+  height: var(--body-m);
+}
+
 .line {
   fill: none;
   stroke: var(--sapphire);
@@ -295,14 +306,15 @@ sl-carousel::part(pagination) {
   position: absolute;
   background: white;
   border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 5px;
+  padding: var(--margin-s);
+  border-radius: var(--margin-xs);
   pointer-events: none;
   opacity: 0;
+  font-size: var(--margin-s);
 }
 
 .axis-label {
-  font-size: 14px;
+  font-size: var(--margin-s);
   fill: #333;
 }
 

@@ -9,8 +9,13 @@ const height = 500 - margin.top - margin.bottom;
 const svg = d3
   .select("#mendota-data")
   .append("svg")
-  .attr("width", width + margin.left + margin.right)
-  .attr("height", height + margin.top + margin.bottom)
+  .attr(
+    "viewBox",
+    `0 0 ${width + margin.left + margin.right} ${
+      height + margin.top + margin.bottom
+    }`
+  )
+
   .append("g")
   .attr("transform", `translate(${margin.left},${margin.top})`);
 
@@ -122,6 +127,8 @@ d3.csv("../data/ice_data.csv")
       .attr("y", 35)
       .attr("fill", "black")
       .style("text-anchor", "middle")
+      .style("font-weight", "bold")
+
       .text("Year");
 
     // Add y-axis
@@ -135,7 +142,9 @@ d3.csv("../data/ice_data.csv")
       .attr("x", -height / 2)
       .attr("fill", "black")
       .style("text-anchor", "middle")
-      .text("Number of Days");
+      .style("font-weight", "bold")
+
+      .text("Number of frozen days");
 
     // Add grid lines
     svg
