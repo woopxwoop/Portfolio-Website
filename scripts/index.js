@@ -18,6 +18,8 @@ renderPenTricks();
 
 // renderPopup();
 
+renderProjects();
+
 function renderClassList() {
   let classListHTML = "";
   classList.forEach((c) => {
@@ -102,6 +104,66 @@ function renderPenTricks() {
               </sl-animated-image>
             </sl-card>
           </sl-carousel-item>`;
+  });
+}
+
+function renderProjects() {
+  const projects = [
+    {
+      id: 1,
+      title: "Pokedex",
+      description: "A simple pokedex returning information about pokemon",
+      image: "media/images/bulb.png",
+      technologies: ["JavaScript"],
+      category: "web",
+      link: "./pages/pokemon_project.html",
+    },
+    {
+      id: 2,
+      title: "Weather App",
+      description:
+        "Simple web app which fetches weather data from an API and displays it",
+      image: "media/images/bulb.png",
+      technologies: [
+        "TypeScript",
+        "React",
+        "Vercel",
+        "Redis",
+        "Tailwind",
+        "Shadcn",
+      ],
+      category: "web",
+      link: "https://cs571-f25.github.io/p72/#/weather",
+    },
+  ];
+
+  const projectContainer = document.querySelector(".projects-container");
+  projectContainer.innerHTML = "";
+
+  projects.forEach((project) => {
+    const techBadges = project.technologies
+      .map(
+        (tech) => `<span class="badge tech-badge bg-secondary">${tech}</span>`
+      )
+      .join("");
+
+    const projectCard = `
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="card project-card h-100">
+                            <img src="${project.image}" class="card-img-top" alt="${project.title}">
+                            <div class="card-body">
+                                <h5 class="card-title">${project.title}</h5>
+                                <p class="card-text">${project.description}</p>
+                                <div class="mb-3">
+                                    ${techBadges}
+                                </div>
+                                <a href="${project.link}" class="btn btn-primary mt-auto">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+    projectContainer.innerHTML += projectCard;
   });
 }
 
