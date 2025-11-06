@@ -6,6 +6,8 @@ import { pictures } from "../data/pictures.js";
 
 import { penTricksList } from "../data/pen-tricks.js";
 
+import { projects } from "../data/projects.js";
+
 getEnkaData();
 
 renderClassList();
@@ -108,35 +110,6 @@ function renderPenTricks() {
 }
 
 function renderProjects() {
-  const projects = [
-    {
-      id: 1,
-      title: "Pokedex",
-      description: "A simple pokedex returning information about pokemon",
-      image: "media/images/bulb.png",
-      technologies: ["JavaScript"],
-      category: "web",
-      link: "./pages/pokemon_project.html",
-    },
-    {
-      id: 2,
-      title: "Weather App",
-      description:
-        "Simple web app which fetches weather data from an API and displays it",
-      image: "media/images/bulb.png",
-      technologies: [
-        "TypeScript",
-        "React",
-        "Vercel",
-        "Redis",
-        "Tailwind",
-        "Shadcn",
-      ],
-      category: "web",
-      link: "https://cs571-f25.github.io/p72/#/weather",
-    },
-  ];
-
   const projectContainer = document.querySelector(".projects-container");
   projectContainer.innerHTML = "";
 
@@ -157,7 +130,7 @@ function renderProjects() {
                                 <div class="mb-3">
                                     ${techBadges}
                                 </div>
-                                <a href="${project.link}" class="btn btn-primary mt-auto">View Project</a>
+                                <a href="${project.link}" target="_blank" class="btn btn-primary mt-auto">View Project</a>
                             </div>
                         </div>
                     </div>
