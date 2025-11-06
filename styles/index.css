@@ -48,46 +48,6 @@ body {
   font-family: "Bree Serif", "Arial";
 }
 
-@media screen and (max-width: 1000px) {
-  html {
-    font-size: var(--margin-l);
-  }
-}
-
-@media screen and (max-width: 800px) {
-  html {
-    font-size: var(--margin-s);
-  }
-
-  .section-container {
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-  }
-
-  .profile-photo {
-    order: -1; /* 👈 moves image ABOVE text */
-    justify-content: center;
-    margin-bottom: var(--margin-s);
-  }
-
-  .about-me {
-    flex-basis: 100%;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  html {
-    font-size: var(--margin-xs);
-  }
-}
-
-@media screen and (max-width: 400px) {
-  html {
-    font-size: var(--margin-xxs);
-  }
-}
-
 .header {
   display: flex;
   flex-direction: row;
@@ -124,12 +84,13 @@ body {
   align-items: flex-start;
   padding-bottom: var(--margin-m);
   margin-left: var(--margin-xxl);
-  margin-right: var(--margin-xxxl);
+  margin-right: var(--margin-xxl);
 }
 
 .section-column {
   display: flex;
   flex-direction: column;
+  max-width: 45vw;
 }
 
 .section-header {
@@ -148,8 +109,8 @@ body {
 
 .profile-photo {
   margin-top: var(--margin-m);
-  width: 50%;
-  height: 50%;
+  max-width: 25vw;
+  max-height: 25vw;
   min-width: var(--margin-xxxxxl);
   min-height: var(--margin-xxxxxl);
   border-radius: 50%;
@@ -230,17 +191,15 @@ body {
   background-color: var(--sapphire);
 }
 
-.projects-container {
-  max-width: 50vw;
-}
-
 .project-card {
   transition: transform 0.3s, box-shadow 0.3s;
   border: none;
   border-radius: var(--margin-s);
   overflow: hidden;
-  margin-bottom: var(--margin-m);
+  margin-top: var(--margin-xxl);
+  margin-bottom: var(--margin-xxl);
   width: 100%;
+
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -250,7 +209,7 @@ body {
 }
 
 .card-img-top {
-  height: var(--body-s);
+  height: var(--body-xs);
   object-fit: cover;
   transition: transform 0.5s;
 }
@@ -280,8 +239,8 @@ body {
 }
 
 sl-carousel {
-  height: 500px;
-  width: 440px;
+  height: 480px;
+  width: 480px;
   --scrollbar-width: 0; /* hide horizontal scrollbar if any */
 }
 
@@ -328,9 +287,9 @@ sl-carousel::part(pagination) {
   margin-top: var(--margin-s);
 }
 
-.mendota-section {
-  width: var(--body-l);
-  height: var(--body-m);
+#mendota-data {
+  width: 100%;
+  height: 100%;
 }
 
 .line {
@@ -368,4 +327,58 @@ sl-carousel::part(pagination) {
 
 .regression-line {
   stroke: var(--persian-rose);
+}
+
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: var(--margin-l);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  html {
+    font-size: var(--margin-s);
+  }
+
+  .section-header,
+  .section-container,
+  .section-column,
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .section-container {
+    width: 80%;
+  }
+
+  .profile-photo {
+    order: -1; /* moves image ABOVE text */
+    justify-content: center;
+    margin-bottom: var(--margin-s);
+    max-width: 25vw;
+    max-height: 25vw;
+  }
+
+  .about-me {
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: var(--margin-xxs);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: var(--margin-xxxxs);
+  }
 }

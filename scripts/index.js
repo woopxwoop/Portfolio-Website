@@ -122,7 +122,7 @@ function renderProjects() {
 
     const projectCard = `
                     <div class="col-sm-12 col-md-6 col-lg-6">
-                        <div class="card project-card h-100">
+                        <div class="card project-card h-80">
                             <img src="${project.image}" class="card-img-top" alt="${project.title}">
                             <div class="card-body">
                                 <h5 class="card-title">${project.title}</h5>
