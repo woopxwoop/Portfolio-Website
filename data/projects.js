@@ -10,7 +10,7 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Weather App",
+    title: "Weather App (wip for class project)",
     description:
       "Simple web app which fetches weather data from an API and displays it",
     image: "https://cs571-f25.github.io/p72/icon.png",

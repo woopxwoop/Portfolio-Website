@@ -1,3 +1,9 @@
+*,
+.navbar {
+  margin: 0;
+  padding: 0;
+}
+
 .disclaimer {
   display: block;
   font-size: var(--margin-xl);
