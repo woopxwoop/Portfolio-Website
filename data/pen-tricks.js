@@ -5,7 +5,7 @@ class PenTrick {
 
   constructor(name) {
     this.name = name;
-    this.src = `/media/webps/pen-spinning/${name}.webp`;
+    this.src = `./media/webps/pen-spinning/${name}.webp`;
     this.alt = `Pen spinning trick: ${name}`;
   }
 }

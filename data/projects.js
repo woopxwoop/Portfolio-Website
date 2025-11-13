@@ -6,7 +6,7 @@ export const projects = [
     image: "https://cs571-f25.github.io/p72/wooper.png",
     technologies: ["JavaScript"],
     category: "web",
-    link: "./pages/pokemon_project.html",
+    link: "./pokemon_project.html",
   },
   {
     id: 2,
