@@ -12,7 +12,7 @@ export let pictures = [
   },
   */
   {
-    src: "/media/images/aki.jpg",
+    src: "./media/images/aki.jpg",
     alt: "picture of me, Andrew Lou",
   },
 ];
