@@ -1,8 +1,8 @@
-import { getUserData } from "/data/enka.js";
+import { getUserData } from "../data/enka.js";
 
-import { penTricksList } from "/data/pen-tricks.js";
+import { penTricksList } from "../data/pen-tricks.js";
 
-import { addDialogEvent } from "/scripts/header.js";
+import { addDialogEvent } from "./header.js";
 
 getEnkaData();
 

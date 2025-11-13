@@ -1,10 +1,10 @@
-import { classList } from "/data/class-list.js";
+import { classList } from "../data/class-list.js";
 
-import { pictures } from "/data/pictures.js";
+import { pictures } from "../data/pictures.js";
 
-import { projects } from "/data/projects.js";
+import { projects } from "../data/projects.js";
 
-import { addDialogEvent } from "/scripts/header.js";
+import { addDialogEvent } from "./header.js";
 
 renderClassList();
 
