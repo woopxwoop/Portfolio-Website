@@ -2,7 +2,7 @@ export const projects = [
   {
     id: 1,
     title: "Pokedex",
-    description: "A simple pokedex returning information about pokemon",
+    description: "Easy pokemon lookup",
     image: "https://cs571-f25.github.io/p72/wooper.png",
     technologies: ["JavaScript"],
     category: "web",
@@ -10,9 +10,8 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Weather App (wip for class project)",
-    description:
-      "Simple web app which fetches weather data from an API and displays it",
+    title: "Weather App (wip)",
+    description: "Tomorrow.io web app",
     image: "https://cs571-f25.github.io/p72/icon.png",
     technologies: [
       "TypeScript",

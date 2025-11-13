@@ -53,11 +53,11 @@
 
   <body>
     <nav class ="navbar header fixed-top">
-      <div class="header-about-me header-elem">Who am I?</div>
-      <div class="header-projects header-elem">Projects</div>
-      <div class="header-education header-elem">Education</div>
+      <a class="nav-link header-elem" href="/index.html">Portfolio</a>
+      <a class="nav-link header-elem" href="/pages/interests.html">My Interests</a>
+      <!-- <div class="header-education header-elem">Education</div> -->
       <!-- <div class="header-contact-me header-elem">Contact Me</div> -->
-      <div class="header-contact-me header-elem">Contact Me!</div>
+      <div class="header-elem header-contact-me">Contact Me!</div>
     </nav>
 
     <main>
@@ -87,67 +87,36 @@
         <img id="head-shot" />
       </div>
     -->
-      <div class="section-container">
+      <div class="section-container about-me-section">
         <div class="section-column">
-          <h1 class="section-header about-me-section">About Me</h1>
-          <div class="about-me">
-            Hello. I am An(drew) Lou, a 2nd year computer science student at the
-            University of Wisconsin-Madison! I am currently learning about AI,
-            Full-stack Development, Operating Systems and studying 日本語
-            (Japanese) and 中文(Chinese) on the side.
-          </div>
+          <h1 class="section-header">About Me</h1>
+          <h2 class="about-me">
+            Hello. I am <div class = "accent">Andrew Lou</div>, a 2nd year computer science student at the University of Wisconsin-Madison! Currently, I am interested in Full-Stack Development, AI, Game Design, and Human-Computer Interaction.
+          </h2>
         </div>
-          <div class="profile-photo section-container">
+          <div class="profile-photo section-column">
             <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner"></div>
             </div>
           </div>
         </div>
       </div>
-      <div class="section-container">
-        <div class="section-column">
-          <h1 class="section-header projects-section">
-            Projects (I'll update the pictures sometime...)
+      <div class = "projects-section">
+        <div class="section-container">
+          <h1 class="section-header">
+            Projects 
           </h1>
           <div class="projects-container row"></div>
-        </div>
-        <div class="section-column">
-          <div class="section-header">Climate change is real</div>
-          <p>
-            You can't tell but this line was made using
-            <a
-              href="https://en.wikipedia.org/wiki/Backpropagation"
-              target="_blank"
-              >backprop</a
-            >
-          </p>
-          <div id="mendota-data"></div>
         </div>
       </div>
 
       <div class="section-container">
-        <div class="section-column">
-          <h1 class="section-header class-list-section">Courses at Madison</h1>
-          <div class="class-list-container">
-            <ul class="class-list"></ul>
-          </div>
-        </div>
-        <div class="section-column">
-          <div style="text-align: center">
-            Pen tricks that will not get you hired:
-          </div>
-          <sl-carousel
-            autoplay
-            autoplay-interval="5000"
-            loop
-            pagination
-            navigation
-          >
-          </sl-carousel>
+        <h1 class="section-header class-list-section">Courses at Madison</h1>
+        <div class="class-list-container">
+          <ul class="class-list"></ul>
         </div>
       </div>
     </main>
     <script type="module" src="scripts/index.js?v=1.1"></script>
-    <script type="module" src="scripts/mendota-data.js?v=1.1"></script>
   </body>
 </html>

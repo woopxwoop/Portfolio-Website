@@ -1,26 +1,22 @@
-import { classList } from "../data/class-list.js";
+import { classList } from "/data/class-list.js";
 
-import { getUserData } from "../data/enka.js";
+import { pictures } from "/data/pictures.js";
 
-import { pictures } from "../data/pictures.js";
+import { projects } from "/data/projects.js";
 
-import { penTricksList } from "../data/pen-tricks.js";
-
-import { projects } from "../data/projects.js";
-
-getEnkaData();
+import { addDialogEvent } from "/scripts/header.js";
 
 renderClassList();
 
-addHeaderEvents();
+// addHeaderEvents();
 
 renderHeadShots();
-
-renderPenTricks();
 
 // renderPopup();
 
 renderProjects();
+
+addDialogEvent();
 
 function renderClassList() {
   let classListHTML = "";
@@ -82,33 +78,6 @@ function renderPopup() {
   });
 }
 
-function addDialogEvent() {
-  const dialog = document.querySelector(".dialog-overview");
-  const openButton = document.querySelector(".header-contact-me");
-  const closeButton = dialog.querySelector('sl-button[slot="footer"]');
-
-  openButton.addEventListener("click", () => dialog.show());
-  closeButton.addEventListener("click", () => dialog.hide());
-}
-
-function renderPenTricks() {
-  const carousel = document.querySelector("sl-carousel");
-
-  penTricksList.forEach((penTrick) => {
-    carousel.innerHTML += `<sl-carousel-item role="tabpanel">
-            <sl-card class = "card-header">
-              <div slot="header">${penTrick.name}</div>
-              <sl-animated-image
-                play
-                src="${penTrick.src}"
-                alt="${penTrick.alt}"
-              >
-              </sl-animated-image>
-            </sl-card>
-          </sl-carousel-item>`;
-  });
-}
-
 function renderProjects() {
   const projectContainer = document.querySelector(".projects-container");
   projectContainer.innerHTML = "";
@@ -121,7 +90,7 @@ function renderProjects() {
       .join("");
 
     const projectCard = `
-                    <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="card project-card h-80">
                             <img src="${project.image}" class="card-img-top" alt="${project.title}">
                             <div class="card-body">
@@ -138,37 +107,4 @@ function renderProjects() {
 
     projectContainer.innerHTML += projectCard;
   });
-}
-
-async function getEnkaData(cacheKey = "enkaData", ttl = 3600_000) {
-  // default 1 hour TTL
-  const cached = localStorage.getItem(cacheKey);
-
-  if (cached) {
-    const { timestamp, data } = JSON.parse(cached);
-    const age = Date.now() - timestamp;
-
-    if (age < ttl) {
-      // Still fresh
-      console.log("Using cached data");
-      return data;
-    }
-  }
-
-  const UID = 621003558;
-
-  let userData;
-
-  try {
-    getUserData().then((data) => {
-      userData = data;
-      localStorage.setItem(
-        cacheKey,
-        JSON.stringify({ userData, timestamp: Date.now() })
-      );
-    });
-  } catch (error) {
-    console.error("Invalid fetch");
-    return;
-  }
 }

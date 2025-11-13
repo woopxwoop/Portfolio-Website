@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>My Interests</title>
+    <link rel="stylesheet" href="/styles/bootstrap-styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="/styles/interests.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css"
+    />
+
+    <script src="/scripts/bootstrap-scripts/bootstrap.bundle.js"></script>
+
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"
+    ></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+    <sl-dialog label="Contact Me!" class="dialog-overview">
+    <sl-icon-button
+      name="envelope"
+      href="mailto:alou2@wisc.edu"
+      target="_blank"
+    >
+    </sl-icon-button>
+
+    <sl-icon-button
+      name="linkedin"
+      href="https://www.linkedin.com/in/an-lou-350aa5374/"
+      target="_blank"
+    ></sl-icon-button>
+
+    <sl-icon-button
+      name="file-earmark-person"
+      href="./media/pdfs/Base Resume.pdf"
+      target="_blank"
+    ></sl-icon-button>
+
+    <sl-button slot="footer" variant="primary">Close</sl-button>
+  </sl-dialog>
+  
+  <body>
+    <nav class="navbar header fixed-top">
+      <a class="nav-link header-elem" href="/index.html">Portfolio</a>
+      <a class="nav-link header-elem" href="/pages/interests.html"
+        >My Interests</a
+      >
+      <!-- <div class="header-education header-elem">Education</div> -->
+      <!-- <div class="header-contact-me header-elem">Contact Me</div> -->
+      <div class="header-elem header-contact-me">Contact Me!</div>
+    </nav>
+    <main>
+            <div class="section-container">
+        <div class="section-column">
+          <div class="section-header">Climate change is real</div>
+          <p>
+            You can't tell but this line was made using
+            <a
+              href="https://en.wikipedia.org/wiki/Backpropagation"
+              target="_blank"
+              >backprop</a
+            >
+          </p>
+          <div id="mendota-data"></div>
+        </div>
+          <div class="section-column">
+            <div style="text-align: center">
+              Pen tricks that will not get you hired:
+            </div>
+            <sl-carousel
+              autoplay
+              autoplay-interval="5000"
+              loop
+              pagination
+              navigation
+            >
+            </sl-carousel>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/scripts/interests.js?v=1.1"></script>
+    <script type="module" src="/scripts/mendota-data.js?v=1.1"></script>
+  </body>
+</html>
