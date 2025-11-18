@@ -12,6 +12,11 @@
   color: black;
 }
 
+.blue {
+  color: var(--sapphire);
+  display: inline-block;
+}
+
 :root {
   --mimi-pink: #ffd6ffff;
   --mauve: #e7c6ffff;
@@ -53,6 +58,10 @@ html,
 head,
 body {
   font-family: "Bree Serif", "Arial";
+}
+
+p {
+  margin: var(--margin-xs);
 }
 
 h1 {
@@ -174,6 +183,11 @@ h2 {
 
 .class-list {
   text-align: left;
+}
+
+.class-projects {
+  font-size: var(--margin-s);
+  color: rgb(50, 50, 50);
 }
 
 .popup-overlay {

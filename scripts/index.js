@@ -20,8 +20,33 @@ addDialogEvent();
 
 function renderClassList() {
   let classListHTML = "";
-  classList.forEach((c) => {
-    classListHTML += `<li>${c.getListing()}: ${c.getDescription()}</li>`;
+  classList.forEach((c, index) => {
+    const projects = c.getProjects() || [];
+
+    let projectsHTML = "";
+    projects.forEach((project) => {
+      projectsHTML += `<p> <div class = "blue">${project.getTitle()}</div>: ${project.getDescription()} </p>`;
+    });
+
+    classListHTML += `
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="heading${index}">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${index}" aria-expanded="false" aria-controls="collapse${index}">
+          ${c.getListing()}: ${c.getDescription()} `;
+
+    if (projectsHTML) {
+      classListHTML += "<";
+    }
+
+    classListHTML += `
+        </button>
+      </h2>
+      <div id="collapse${index}" class="accordion-collapse collapse" aria-labelledby="heading${index}" data-bs-parent="#accordionExample">
+        <div class="accordion-body class-projects">
+          ${projectsHTML}
+        </div>
+      </div>
+    </div>`;
   });
 
   document.querySelector(".class-list").innerHTML = classListHTML;
