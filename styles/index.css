@@ -336,3 +336,32 @@ h2 {
     font-size: var(--margin-xxxxs);
   }
 }
+
+/* hide default BS arrow */
+.accordion-button::after {
+  display: none;
+}
+
+.accordion-button:not(.collapsed) .arrow {
+  transform: rotate(225deg); /* up arrow */
+}
+
+.accordion-button .arrow {
+  margin-left: auto;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #555;
+  border-bottom: 2px solid #555;
+  transform: rotate(45deg); /* down arrow */
+  transition: transform 0.25s ease;
+}
+
+/* items without children look flat & disabled */
+.accordion-button.no-expand {
+  cursor: default;
+  background-color: #f8f9fa;
+}
+
+.accordion-button.no-expand .arrow {
+  display: none;
+}
