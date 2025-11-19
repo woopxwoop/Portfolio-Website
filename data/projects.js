@@ -6,7 +6,7 @@ export const projects = [
     image: "https://cs571-f25.github.io/p72/wooper.png",
     technologies: ["JavaScript"],
     category: "web",
-    link: "./pokemon_project.html",
+    link: "https://studio.code.org/projects/applab/OyT0N4tNcVFDVQDuFIcrpLjZYe9oGXTZU0rUPMxwxvQ",
   },
   {
     id: 2,
