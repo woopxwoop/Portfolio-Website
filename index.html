@@ -29,6 +29,8 @@
     <!-- bootstrap -->
   </head>
 
+  <body>
+    
   <sl-dialog label="Contact Me!" class="dialog-overview">
     <sl-icon-button
       name="envelope"
@@ -51,50 +53,24 @@
 
     <sl-button slot="footer" variant="primary">Close</sl-button>
   </sl-dialog>
-
-  <body>
-    <nav class ="navbar header fixed-top">
-      <a class="nav-link header-elem" href="./">Portfolio</a>
-      <a class="nav-link header-elem" href="./interests.html"
-        >My Interests</a
-      >
-      <!-- <div class="header-education header-elem">Education</div> -->
-      <!-- <div class="header-contact-me header-elem">Contact Me</div> -->
-      <div class="header-elem header-contact-me">Contact Me!</div>
+    <nav class="header fixed-top">
+      <div class="header-inner">
+        <a class="brand" href="./">Andrew Lou</a>
+        <button class="header-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
+        <div id="site-nav" class="header-nav">
+          <a href="./">Portfolio</a>
+          <a href="./interests.html">My Interests</a>
+          <a class="btn header-contact-me" href="#contact">Contact</a>
+        </div>
+      </div>
     </nav>
 
     <main>
-      <!--
-      <div class="popup-overlay">
-        <div class="popup-container">
-          <div class="popup-content">
-            <div class="disclaimer">
-              CAUTION: This website is not done (clearly)
-            </div>
-            <div>
-              <button type="button" class="btn close-popup">Continue</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      -->
-
-      <sl-alert variant="primary" open closable class="alert-closable">
-        <sl-icon slot="icon" name="info-circle"></sl-icon>
-        This website is in it's infancy (as you can probably tell)
-      </sl-alert>
-      <br />
-
-      <!--
-      <div class="profile-photo">
-        <img id="head-shot" />
-      </div>
-    -->
       <div class="section-container about-me-section">
         <div class="section-column">
           <h1 class="section-header">About Me</h1>
           <h2 class="about-me">
-            Hello. I am <div class = "accent">Andrew Lou</div>, a 2nd year computer science student at the University of Wisconsin-Madison! Currently, I am interested in Full-Stack Development, AI, Game Design, and Human-Computer Interaction.
+            Hello. I am <span class = "accent">Andrew Lou</span>, a 2nd year computer science student at the University of Wisconsin-Madison! Currently, I am interested in Full-Stack Development, AI, Game Design, and Human-Computer Interaction.
           </h2>
         </div>
           <div class="profile-photo section-column">
@@ -113,12 +89,13 @@
         </div>
       </div>
 
-      <div class="section-container">
-        <h1 class="section-header class-list-section">Courses at Madison</h1>
+      <div class="section-container class-list-section">
+        <h1 class="section-header">Courses at Madison</h1>
         <div class="class-list accordian">
         </div>
       </div>
     </main>
+    <script type="module" src="scripts/index.js?v=1.2"></script>
     <script type="module" src="scripts/index.js?v=1.2"></script>
   </body>
 </html>

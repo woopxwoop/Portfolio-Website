@@ -50,18 +50,25 @@
   </sl-dialog>
   
   <body>
-    <nav class="navbar header fixed-top">
-    <nav class ="navbar header fixed-top">
-      <a class="nav-link header-elem" href="./">Portfolio</a>
-      <a class="nav-link header-elem" href="./interests.html"
-        >My Interests</a
-      >
-      <!-- <div class="header-education header-elem">Education</div> -->
-      <!-- <div class="header-contact-me header-elem">Contact Me</div> -->
-      <div class="header-elem header-contact-me">Contact Me!</div>
+    <sl-dialog label="Contact Me!" class="dialog-overview">
+      <sl-icon-button name="envelope" href="mailto:alou2@wisc.edu" target="_blank"></sl-icon-button>
+      <sl-icon-button name="linkedin" href="https://www.linkedin.com/in/an-lou-350aa5374/" target="_blank"></sl-icon-button>
+      <sl-icon-button name="file-earmark-person" href="./media/pdfs/Base Resume.pdf" target="_blank"></sl-icon-button>
+      <sl-button slot="footer" variant="primary">Close</sl-button>
+    </sl-dialog>
+
+    <nav class="header fixed-top">
+      <div class="header-inner">
+        <a class="brand" href="./">Andrew Lou</a>
+        <button class="header-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
+        <div id="site-nav" class="header-nav">
+          <a href="./">Portfolio</a>
+          <a href="./interests.html">My Interests</a>
+          <a class="btn header-contact-me" href="#contact">Contact</a>
+        </div>
+      </div>
     </nav>
 
-    </nav>
     <main>
             <div class="section-container">
         <div class="section-column">

@@ -1,3 +1,17 @@
+/* interests.css
+   Imports the main site styles and provides page-specific tweaks for the Interests page.
+*/
+@import "./index.css";
+
+/* Page-specific overrides */
+.mendota-chart {
+  max-width: 680px;
+  margin: 1rem auto;
+}
+.interests-hero {
+  text-align: center;
+  padding: 1.25rem 0;
+}
 *,
 .navbar {
   margin: 0;
