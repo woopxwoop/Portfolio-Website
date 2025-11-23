@@ -188,7 +188,12 @@ export let classList = [
       {
         title: "8(7)-Puzzle Game",
         description:
-          "Implement the A* algorithm to solve a modified version of the 8-Puzzle game with only 7 tiles. ",
+          "Implemented the A* algorithm to solve a modified version of the 8-Puzzle game with only 7 tiles. ",
+      },
+      {
+        title: "Teeko AI",
+        description:
+          "Implemented the minmax algorithm to make an AI that can play Teeko and win",
       },
     ],
   },
