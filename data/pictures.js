@@ -15,4 +15,8 @@ export let pictures = [
     src: "./media/images/aki.jpg",
     alt: "picture of me, Andrew Lou",
   },
+  {
+    src: "./media/images/samui.jpg",
+    alt: "picture of me, Andrew Lou",
+  },
 ];

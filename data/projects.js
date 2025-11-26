@@ -10,8 +10,8 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Weather App (wip)",
-    description: "Tomorrow.io web app",
+    title: "Weather, Huh?",
+    description: "Tomorrow.io powered web app",
     image: "https://cs571-f25.github.io/p72/icon.png",
     technologies: [
       "TypeScript",
