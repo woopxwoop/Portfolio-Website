@@ -20,6 +20,7 @@ export const projects = [
       "Redis",
       "Tailwind",
       "Shadcn",
+      "GeminiAPI",
     ],
     category: "web",
     link: "https://cs571-f25.github.io/p72/#/weather",
