@@ -28,7 +28,7 @@ export const projects = [
   {
     id: 3,
     title: "Flappy Bird NN",
-    dsecription: "Visualization of MLP on flappy bird",
+    description: "Visualization of MLP on flappy bird",
     image: "https://woopxwoop.github.io/Flappy-Bird-NN/thumbnail.png",
     technologies: ["JavaScript, CanvasJS"],
     category: "web",
