@@ -25,4 +25,13 @@ export const projects = [
     category: "web",
     link: "https://cs571-f25.github.io/p72/#/weather",
   },
+  {
+    id: 3,
+    title: "Flappy Bird NN",
+    dsecription: "Visualization of MLP on flappy bird",
+    image: "https://woopxwoop.github.io/Flappy-Bird-NN/thumbnail.png",
+    technologies: ["JavaScript, CanvasJS"],
+    category: "web",
+    link: "https://woopxwoop.github.io/Flappy-Bird-NN",
+  },
 ];
