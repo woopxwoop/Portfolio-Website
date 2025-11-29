@@ -144,6 +144,11 @@ export let classList = [
         description:
           "Wrote a program using Locks, Semaphores, and Condition Variables to guarantee concurrency for the reader-writer problem and the bounded-buffer problem.",
       },
+      {
+        title: "Colored File System",
+        description:
+          "Wrote a program to utilize FUSE to simulate mounting a disk file system, with custom attributes for the files, such as allowing the user to set custom colors for the file names",
+      },
     ],
   },
   {
