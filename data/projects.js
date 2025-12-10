@@ -16,14 +16,15 @@ export const projects = [
     technologies: [
       "TypeScript",
       "React",
+      "Next",
       "Vercel",
       "Redis",
       "Tailwind",
       "Shadcn",
-      "Gemini + Maps API",
+      "Rest APIs",
     ],
     category: "web",
-    link: "https://cs571-f25.github.io/p72/#/weather",
+    link: "https://cs571-f25.github.io/p72/",
   },
   {
     id: 1,
