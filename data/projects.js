@@ -6,7 +6,7 @@ export const projects = [
     image: "https://woopxwoop.github.io/Flappy-Bird-NN/thumbnail.png",
     technologies: ["JavaScript", "CanvasJS"],
     category: "web",
-    link: "https://woopxwoop.github.io/Flappy-Bird-NN",
+    link: "https://woopxwoop.github.io/flappy-bird",
   },
   {
     id: 2,
