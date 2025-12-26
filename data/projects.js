@@ -36,3 +36,15 @@ export const projects = [
     link: "https://studio.code.org/projects/applab/OyT0N4tNcVFDVQDuFIcrpLjZYe9oGXTZU0rUPMxwxvQ",
   },
 ];
+
+export const contributions = [
+    {
+    id: 1,
+    title: "Genshin Optimizer",
+    description: "Tool to optimize damage in Genshin Impact",
+    image: "https://upload-os-bbs.hoyolab.com/upload/2023/03/04/14638982/e7c6217ab8627233b34f0ef77471a174_9152906502062637065.jpeg",
+    technologies: ["TypeScript", "React"],
+    category: "web",
+    link: "https://frzyc.github.io/genshin-optimizer",
+  },
+]

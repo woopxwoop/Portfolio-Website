@@ -2,7 +2,7 @@ import { classList } from "../data/class-list.js";
 
 import { pictures } from "../data/pictures.js";
 
-import { projects } from "../data/projects.js";
+import { projects, contributions } from "../data/projects.js";
 
 import { addDialogEvent } from "./header.js";
 
@@ -15,6 +15,8 @@ renderHeadShots();
 // renderPopup();
 
 renderProjects();
+
+renderContributions();
 
 addDialogEvent();
 
@@ -118,6 +120,37 @@ function renderProjects() {
   projectContainer.innerHTML = "";
 
   projects.forEach((project) => {
+    const techBadges = project.technologies
+      .map(
+        (tech) => `<span class="badge tech-badge bg-secondary">${tech}</span>`
+      )
+      .join("");
+
+    const projectCard = `
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card project-card h-80">
+                            <img src="${project.image}" class="card-img-top" alt="${project.title}">
+                            <div class="card-body">
+                                <h5 class="card-title">${project.title}</h5>
+                                <p class="card-text">${project.description}</p>
+                                <div class="mb-3">
+                                    ${techBadges}
+                                </div>
+                                <a href="${project.link}" target="_blank" class="btn btn-primary mt-auto">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+    projectContainer.innerHTML += projectCard;
+  });
+}
+
+function renderContributions() {
+  const projectContainer = document.querySelector(".contributions-container");
+  projectContainer.innerHTML = "";
+
+  contributions.forEach((project) => {
     const techBadges = project.technologies
       .map(
         (tech) => `<span class="badge tech-badge bg-secondary">${tech}</span>`

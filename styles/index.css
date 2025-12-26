@@ -152,7 +152,7 @@ h2 {
   width: 90%;
 }
 
-.projects-section {
+.projects-section{
   color: white;
   background-color: var(--sapphire);
   padding-top: var(--margin-l);
@@ -267,7 +267,7 @@ h2 {
   display: contents;
 }
 
-.projects-container .project-card {
+.projects-container .project-card{
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -499,7 +499,10 @@ main {
   padding: 2rem;
   border-radius: var(--card-radius);
   margin: 1.25rem 0;
+  width: 100%;
 }
+
+
 .about-me-section {
   display: grid;
   grid-template-columns: 1fr 360px;
